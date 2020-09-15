@@ -21,19 +21,19 @@ namespace ConsoleApp1
             q.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             double ValorTotalEstoque = (p.Preço * q.Quantidade);
-            Console.WriteLine("Dados do produto: " + n.Nome + ", R$" + p.Preço.ToString("F2", CultureInfo.InvariantCulture) + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque);
+            Console.WriteLine("Dados do produto: " + n.Nome + ", R$" + p.Preço.ToString("F2", CultureInfo.InvariantCulture) + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.Write("Digite o número a ser adicionado no estoque: ");
             int AdicionarProdutos = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             q.Quantidade = q.Quantidade + AdicionarProdutos;
             ValorTotalEstoque = (p.Preço * q.Quantidade);
-            Console.WriteLine("Dados atualizados do produto: " + n.Nome + ", R$" + p.Preço + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque);
+            Console.WriteLine("Dados atualizados do produto: " + n.Nome + ", R$" + p.Preço.ToString("F2", CultureInfo.InvariantCulture) + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.Write("Digite o número a ser retirado no estoque: ");
             int RemoverProdutos = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             q.Quantidade = q.Quantidade - RemoverProdutos;
             ValorTotalEstoque = p.Preço * q.Quantidade;
-            Console.WriteLine("Dados atualizados do produto: " + n.Nome + ", R$" + p.Preço + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque);
+            Console.WriteLine("Dados atualizados do produto: " + n.Nome + ", R$" + p.Preço.ToString("F2", CultureInfo.InvariantCulture) + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.ReadKey();
         }
