@@ -16,12 +16,12 @@ namespace ConsoleApp1
             Console.Write("Nome: ");
             n.Nome = Console.ReadLine();
             Console.Write("Preço: ");
-            p.Preço = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            p.Preço = double.Parse(Console.ReadLine() ,CultureInfo.InvariantCulture);
             Console.Write("Quantidade em estoque: ");
             q.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             double ValorTotalEstoque = (p.Preço * q.Quantidade);
-            Console.WriteLine("Dados do produto: " + n.Nome + ", R$" + p.Preço + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque);
+            Console.WriteLine("Dados do produto: " + n.Nome + ", R$" + p.Preço.ToString("F2", CultureInfo.InvariantCulture) + ", " + q.Quantidade + " unidades, total: R$" + ValorTotalEstoque);
 
             Console.Write("Digite o número a ser adicionado no estoque: ");
             int AdicionarProdutos = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
